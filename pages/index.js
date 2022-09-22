@@ -1,11 +1,27 @@
-
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import styles from '../styles/Home.module.css'
 
+
+
 export default function Home() {
   return (
     <>
+
+    <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+
     <Header />
     <div className={styles.container}>
       <main className={styles.main}>
