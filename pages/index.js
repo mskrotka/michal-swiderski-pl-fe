@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Container from '../components/Container/Container'
-import Header from '../components/header/Header'
+import Header from '../components/Header/Header'
 
 import styles from '../styles/Home.module.css'
 
@@ -186,6 +186,6 @@ const Home = () => {
       </footer>
     </>
   )
-}
+};
 
 export default Home;
