@@ -1,12 +1,11 @@
-import styles from '../styles/Home.module.css'
-
 import Image from 'next/image'
 import Container from '../components/Container/Container'
 import Header from '../components/header/Header'
 
+import styles from '../styles/Home.module.css'
 
 
-export default function Home() {
+const Home = () => {
   return (
     <>
     <Header />
@@ -188,3 +187,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home;
