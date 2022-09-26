@@ -1,10 +1,15 @@
 import styles from "/styles/Button.module.css"
 
+import Link from 'next/link'
 
-const Button = ({ children }) => {
+const Button = ({ version, href, children }) => {
+  const ver = version === "color" ? styles.color : styles.light
+
   return (
     <div className={styles.wrapper}>
-      <button className={styles.button}>{children}</button>
+        <Link href={href}>
+          <button className={ver}>{children}</button>
+        </Link>
     </div>
   )
 };
