@@ -46,7 +46,6 @@
   font-size: 4rem;
 }
 
-.title,
 .description {
   text-align: center;
 }
@@ -161,18 +160,38 @@
   color: #F14823;
 }
 
+.black {
+  background-color: #1A1A1A;
+  color: #1A1A1A;
+}
+
+.contactForm {
+  background: rgb(180,3,68);
+  background: linear-gradient(139deg, rgba(180,3,68,1) 0%, rgba(223,5,22,1) 100%);
+}
+
+
+
 .textRed {
   color: rgba(180,3,68,1);
   font-weight: 800;
+}
+
+.textStrong {
+  font-weight: 800;
+}
+
+.textWhite {
+  color: rgba(255,255,255,1);
 }
 
 .listDot {
   display: flex;
 }
 
-.wrapper {
-  width: 100%;
-  margin-top: 10%;
+.image {
+  background-color: #F2F2F2;
+  padding: 15px !important;
 }
 
 @media (max-width: 600px) {
