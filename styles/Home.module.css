@@ -170,6 +170,11 @@
   display: flex;
 }
 
+.wrapper {
+  width: 100%;
+  margin-top: 10%;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
