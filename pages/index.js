@@ -1,13 +1,26 @@
+import styles from '../styles/Home.module.css'
+
 import Image from 'next/image'
+import Clients from '../components/Clients/Clients';
 import Container from '../components/Container/Container'
 import Form from '../components/Form/Form';
 import Input from '../components/Form/Input';
+import MoreInfo from '../components/Form/MoreInfo';
 import Header from '../components/Header/Header'
 
-import styles from '../styles/Home.module.css'
+import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
+import { DiGoogleDrive } from 'react-icons/di';
+import { SiGmail } from 'react-icons/si';
+import Link from 'next/link';
+
+
+
 
 
 const Home = () => {
+
+  const actualYear = new Date().getFullYear()
+
   return (
     <>
     <Header />
@@ -17,23 +30,23 @@ const Home = () => {
           <div className={styles.emptySpace}></div>
             <div>
               <p><b>Cześć</b>,</p>
-              <p>mam na imię Michał i <b>zajmuje się</b><br></br><b>łączeniem i agregacją danych</b> w firmach.</p>
-              <p className="smallText">Specjalizuje się w narzędziach<br></br>wspierających marketing i sprzedaż. </p>
+              <p>mam na imię Michał, zajmuje się <b>procesami marketingowymi i sprzedażowymi</b> w firmach.</p>
+              <p className="smallText">Łącze i agreguję ze sobą dane aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div className="col-sm-6">
           <Image src="/images/ja 2.png" alt="Michał Świderski" width={627} height={707} />
         </div>
     </Container>
 
     <Container>
-      <div class="col-sm-6 align-self-center">
+      <div className="col-sm-6 align-self-center">
         <Image src="/images/slidebg.png" alt="Michał Świderski" width={688} height={450} />
       </div>
 
       <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
           <div className={styles.text1}>
-            <p><b>Moim celem jest automatyzacja procesów</b>.</p>
+            <h3><strong>Moim celem jest automatyzacja procesów</strong></h3>
             <p className="smallText">W Twojej fimie występują procesy, które są powtarzalne i narażone na czynniki ludzkie, niezależnie czy prowadzisz JDG czy MŚP. </p>
             <p className="smallText">Automatyzacja procesów pozwala zaoszczędzić czas oraz zminimalizować koszty z nimi związane.</p>
             </div>
@@ -44,24 +57,24 @@ const Home = () => {
       <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
         <div className={styles.emptySpace}></div>
           <div>
-            <p><b>Buduję konektory danych</b></p>
+            <h3><strong>Buduję konektory danych</strong></h3>
             <p className="smallText">Automatyzacja procesów odbywa się poprzez łączenie danych w jednym miejscu i przesyłanie ich dalej. </p>
             <p className="smallText">Konektor jest odpowiedzialny za przepływ danych w Twojej firmie, jednocześnie wykonując kopie zapasowe.</p>
           </div>
       </div>
-      <div class="col-sm-6 align-self-center">
+      <div className="col-sm-6 align-self-center">
         <Image src="/images/professional-web-design.png" alt="Michał Świderski" width={688} height={450} />
       </div>
     </Container>
 
     <Container>
-      <div class="col-sm-6 align-self-center">
+      <div className="col-sm-6 align-self-center">
         <Image src="/images/123.webp" alt="Michał Świderski" width={688} height={555} />
       </div>
 
       <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
-          <div className={styles.text1}>
-            <p><b>Automatyzuję marketing i sprzedaż</b></p>
+          <div>
+            <h3><strong>Automatyzuję marketing i sprzedaż</strong></h3>
             <p className="smallText">Marketing i sprzedaż rządzą się swoimi prawami, które wymagają natychmiastowej reakcji inaczej możemy stracić klienta.</p>
             <p className="smallText">Twoje kampanie mogą przekazać Ci więcej informacji niż tylko dane kontaktowe. Dowiedz się, która kampania jest najskuteczniejsza, jakich słów kluczowych użyli użytkownicy zostawiający dane do siebie czy inne pogłębione informacje o potencjalnym kliencie.</p>
             </div>
@@ -69,7 +82,7 @@ const Home = () => {
     </Container>
 
     <Container>
-      <h2 className={styles.title}>Wdrożone <span className={styles.textRed}>flow</span></h2>
+      <h2 className={styles.title}>Przykładowe <span className={styles.textRed}>flow</span></h2>
 
       <div className={`row ${styles.context}`}>
         <div className="col-sm-4">
@@ -143,7 +156,7 @@ const Home = () => {
       <div className="row">
         <div className={`col-sm-6 align-self-center`}>
           <div>
-            <p className={styles.textLeft}><b>Proces wdrażania udoskonaleń</b></p>
+            <h3><strong>Jak wygląda współpraca?</strong></h3>
             <p className={`${styles.listDot}`}>
               <span className={`${styles.azure} ${styles.dot}`}>⋅⋅</span>
               <span>ustalenie oczekiwanego efektu jest niezwykle ważne, ponieważ od celu zależy podejście oraz dobór odpowiednich narzędzi do procesu</span>
@@ -187,14 +200,17 @@ const Home = () => {
       </div>
     </Container>
 
-    <Container>
-      <div className={`row ${styles.contactForm}`}>
+    <div className="container">
+      <div className={`row py-4 px-4 ${styles.contactForm}`}>
         <div className="col-sm-6 align-self-center px-5">
-        <h2 className={`${styles.title} ${styles.textStrong}`}>Zamów <br></br><span className={styles.textWhite}>rozmowę</span></h2>
-        <p className={styles.textWhite}>Dowiedz się jak mogę usprawnić procesy w Twojej firmie zostawiając kontakt do siebie.</p>
-        <p>podczas rozmowy</p>
-        <ul>
-          <li>porozmawiamy o Twoich procesach</li>
+        <h2 className={`${styles.title} ${styles.textStrong}`}><span className={styles.textWhite}>Zamów </span><br></br>rozmowę</h2>
+        <div className={styles.boxText}>
+          <p className={styles.textWhite}>Dowiedz się jak mogę usprawnić procesy w Twojej firmie zostawiając kontakt do siebie.</p>
+        </div>
+        <h3 className={styles.textWhite}><strong>Podczas rozmowy</strong></h3>
+        <ul className={`${styles.textWhite} ${styles.checkedList}`}>
+          <li>porozmawiamy o Twoich procesach marketingowych i sprzedażowych</li>
+          <li>o innych procesach też możemy porozmawiać</li>
           <li>ustalimy czego potrzebujesz</li>
           <li>opowiem Ci w czym mogę Ci pomóc</li>
           <li>poznamy się 😊</li>
@@ -204,46 +220,58 @@ const Home = () => {
         <div className="col-sm-6 align-self-center">
           <Form onButton="Zamów rozmowę">
             <Input type="input" name="name" label="Twoje imię" required />
-            <Input type="input" name="phone" label="Twój numer telefonu" required />
-            <Input type="textarea" name="info" label="Dodatkowe informacje" />
-            <Input type="checkbox" name="rodo" label="Zgoda na kontakt" required />
+            <Input type="input" name="phone" label="Twój numer telefonu" labelSmall="nikomu dalej nie przekażę" required />
+            <MoreInfo text="Podaj mi więcej informacji, dzięki nim będę bardziej przygotowany do rozmowy." />
+            <Input type="textarea" name="info" label="Dodatkowe informacje" labelSmall="podaj swój adres strony www, opisz w skrócie czym się zajmujesz, co chciałbyś mi przekazać przed naszą rozmową telefoniczną?" />
+            <Input type="checkbox" name="rodo" label="Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu kontaktu zwrotnego przez firmę Michał Świderski NIP: 952-203-59-01 zarejestrowaną w Warszawie przy ul. Cukrowniczej 8, 04-214." required />
           </Form>
 
         </div>
 
       </div>
-    </Container>
+    </div>
 
     <Container>
-      <div className="row">
-        <div className="col-sm-12 align-self-center">
-          <p>zespół</p>
-        </div>
+      <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
+        <div className={styles.emptySpace}></div>
+          <div>
+            <h3><strong>Pracuję z zespołem</strong></h3>
+            <p className="smallText">Współpracuję z programistami, specjlistami ds marketingu, specjalistami od social media oraz doświadczonymi handlowcami.</p>
+            <p className="smallText">Dzięki zespołowi jestem w stanie prowadzić kilka projektów na raz oraz udoskonalać swoje techniki związane z budowaniem i automatyzacją porocesów.</p>
+          </div>
+      </div>
+      <div className="col-sm-6 align-self-center">
+        <Image src="/images/zespol.svg" alt="Michał Świderski" width={688} height={688} />
       </div>
     </Container>
 
-    <Container>
-      <div className="row">
-        <div className="col-sm-12 align-self-center">
-          <p>pozostale uslugi: marketing internetowy, prowadzenie social</p>
+    <div className="container mb-5">
+      <div className={`col-sm-12 align-self-center`}>
+        <div>
+          <h3><strong>Współpracowałem z</strong></h3>
+          <Clients />
         </div>
       </div>
-    </Container>
+    </div>
 
     </main>
 
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <div className="container">
+          <div className="row">
+            <div className={`col-sm-6 ${styles.copy}`}>
+              <p>Copyright © 2013 - {actualYear} Michał Świderski</p>
+
+            </div>
+            <div className={`col-sm-6 ${styles.icons}`}>
+              <a href="https://www.facebook.com/michal.michal.happy/" target="blank"><FaFacebookSquare /></a>
+              <a href="https://www.linkedin.com/in/michal-swiderski/" target="blank"><FaLinkedin /></a>
+              <a href="http://dysk.michal-swiderski.pl/" target="blank"><DiGoogleDrive /></a>
+              <a href="http://poczta.michal-swiderski.pl/" target="blank"><SiGmail /></a>
+            </div>
+          </div>
+        </div>
       </footer>
     </>
   )

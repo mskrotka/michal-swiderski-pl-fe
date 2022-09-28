@@ -1,8 +1,4 @@
-.row {
-    min-height: 768px;
-  }
-
-
-  .container:first-child {
+.container:first-child {
     margin-top: 3.75rem;
+    min-height: 768px;
   }

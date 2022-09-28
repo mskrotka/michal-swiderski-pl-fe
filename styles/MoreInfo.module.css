@@ -1,0 +1,9 @@
+.moreInfo {
+    border-left: 10px solid white;
+    width: 75%;
+    font-size: 1.2rem;
+    color: white;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-weight: 600;
+}
