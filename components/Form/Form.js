@@ -2,15 +2,21 @@ import styles from "/styles/Form.module.css"
 import Button from "../Button/Button";
 
 
-const Form = ({onButton, children }) => {
+const Form = ({ onButton, children }) => {
 
 
   return (
     <div className={styles.wrapper}>
       <form className={styles.form}>
         {children}
-        <Button version="color" href="#">{onButton}</Button>
-        <Button version="light" href="#">{onButton}</Button>
+        <div className={styles.footer}>
+          <div className={styles.button}>
+            <Button version="light" href="#">{onButton}</Button>
+          </div>
+          <div className={styles.req}>
+            <span className={styles.required}>*</span> pole obowiązkowe
+          </div>
+        </div>
       </form>
     </div>
   )

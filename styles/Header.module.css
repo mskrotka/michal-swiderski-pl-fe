@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
     z-index: 1;
+    border: 1px solid yellowgreen;
 }
 
 .wrapper > * {
@@ -15,5 +16,16 @@
 }
 
 .buttonSection {
-    text-align: right;
+    position: fixed;
+    top: 35px;
+    right: 25px;
+    z-index: 1;
+
+}
+
+.logoSection {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
 }
