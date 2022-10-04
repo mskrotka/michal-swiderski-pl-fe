@@ -38,7 +38,7 @@ const Home = () => {
             <div>
               <p><b>Cześć</b>,</p>
               <p>mam na imię Michał, zajmuje się <b>zwiększaniem efektywności marketingu i sprzedaży </b>poprzez modernizację procesów w firmach.</p>
-              <p className="smallText">Łącze i agreguję ze sobą dane aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
+              <p className="smallText">Łącze i agreguję ze sobą dane, aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
             </div>
         </div>
         <div className="col-sm-6">
@@ -83,7 +83,7 @@ const Home = () => {
           <div>
             <h3><strong>Automatyzuję marketing i sprzedaż</strong></h3>
             <p className="smallText">Marketing i sprzedaż rządzą się swoimi prawami, które wymagają natychmiastowej reakcji inaczej możemy stracić klienta.</p>
-            <p className="smallText">Twoje kampanie mogą przekazać Ci więcej informacji niż tylko dane kontaktowe. Dowiedz się, która kampania jest najskuteczniejsza, jakich słów kluczowych użyli użytkownicy zostawiający dane do siebie czy inne pogłębione informacje o potencjalnym kliencie.</p>
+            <p className="smallText">Twoje kampanie, oprócz danych kontaktowych, mogą dać Ci znacznie więcej informacji. Dowiedz się, która kampania jest najskuteczniejsza, jakich słów kluczowych użyli użytkownicy zostawiający dane do siebie czy inne pogłębione informacje o potencjalnym kliencie.</p>
             </div>
         </div>
     </Container>
@@ -94,12 +94,12 @@ const Home = () => {
       <div className={`row ${styles.context}`}>
         <div className="col-sm-4">
           <h3>Branża</h3>
-          <p>Firma zajmuje się sprzedażą i realizacją instalacji fotowoltaicznych oraz pomp ciepła na terenie białej Podlaskiej i Warszawy. Wczeżniej nie korzystała z automatyzacji przy obsłudze klientów.</p>
+          <p>Firma zajmuje się sprzedażą i realizacją instalacji fotowoltaicznych oraz pomp ciepła na terenie białej Podlaskiej i Warszawy. Wcześniej nie korzystała z automatyzacji przy obsłudze klientów.</p>
         </div>
 
         <div className="col-sm-8">
           <h3>Proces</h3>
-          <p>Prowdzone były działania reklamowe z zakresu pozyskiwania kontaktów do potencjalnych klientów poprzez kampanie stworzone w Google Ads. Reklamy wyświetlały się osobom poszukującym usług tego typu, które były kierowane na landing page, gdzie znajdował się formularz z imieniem, numerem telefonu i dodatkowymi informacjami.</p>
+          <p>Prowdzone były działania reklamowe z zakresu pozyskiwania kontaktów do potencjalnych klientów poprzez kampanie stworzone w Google Ads. Osobom poszukująch usług tego typu, wyświetlała się reklama, która kierowała na landing page. Znajdował się tam formularz z imieniem, numerem telefonu i dodatkowymi informacjami od użytkownika.</p>
         </div>
       </div>
 
@@ -113,11 +113,11 @@ const Home = () => {
       <div className={`row ${styles.context}`}>
       <div className="col-sm-3">
           <h3>Konektor</h3>
-          <p>Głównym zadaniem konektora w tym procesie było <span className={styles.textRed}>tworzenie niezależnej bazy danych</span>, aby można było w przyszłości przejść na system CRM z prawidziwego zdarzenia. Sprawował on kontrolę nad każdym etapem procesu od momentu otrzymania danych kontaktowych od użytkownika (lead), aż do zakończenia kontaktu. <span className={styles.textRed}>Konektor został zbudowany w oparciu o API</span>, za pomocą którego komunikował się z pozstałymi systemami obecnymi w procesie.</p>
+          <p>Głównym zadaniem konektora w tym procesie było <span className={styles.textRed}>tworzenie niezależnej bazy danych</span>, aby można było w przyszłości przejść na system CRM z prawidziwego zdarzenia. Sprawował on kontrolę nad każdym etapem procesu od momentu otrzymania danych kontaktowych użytkownika (lead), aż do zakończenia kontaktu. <span className={styles.textRed}>Konektor został zbudowany w oparciu o API</span>, za pomocą którego komunikował się z pozostałymi systemami obecnymi w procesie.</p>
         </div>
 
         <div className="col-sm-9">
-          <h3>Zintegrowane technologie</h3>
+          <h3>Zintegrowane technologie w procesie</h3>
 
           <p className={styles.listDot}>
             <span className={`${styles.yellow} ${styles.dot}`}>⋅⋅</span>
@@ -141,12 +141,12 @@ const Home = () => {
 
           <p className={styles.listDot}>
             <span className={`${styles.azure} ${styles.dot}`}>⋅⋅</span>
-            <span>system reklamowy Google, gdzie po odpowiedniej konfiguracji, konektor otrzymywał słowo kluczowe, którego użytkownik wykorzystał w wyszukiwarce zanim do nas trafił oraz informacje o kampanii</span>
+            <span>po odpowiedniej konfiguracji system reklamowy Google wysyłał do konektora słowo kluczowe, które wykorzystał użytkownik w wyszukiwarce, zanim do nas trafił</span>
           </p>
 
           <p className={styles.listDot}>
             <span className={`${styles.red} ${styles.dot}`}>⋅⋅</span>
-            <span>płatna wersja Google, w której handlowiec tworzył w swoim kalendarzu obszary, na które mógł zapisać się potencjalny klient na prezentację oferty</span>
+            <span>płatna wersja Google, w której handlowiec udostępniał potencjalnym klientom wybrane terminy w swoim kalendarzu na prezentację oferty</span>
             </p>
         </div>
 
@@ -154,7 +154,7 @@ const Home = () => {
       <div className={`row mb-5 ${styles.context}`}>
       <div className="col-sm-12">
           <h3>Konkluzja</h3>
-          <p>Po udoskonaleniu procesu do powyższej wersji wszystkie informacje o leadach były poukładane i zorganizowane, co zwiększyło wydajność samego działu handlowego. <span className={styles.textRed}>Biznes miał bieżący wgląd</span> w działania prowadzone na leadach, a <span className={styles.textRed}>marketing mógł wyciągać trafne wnioski</span> na podstawie, których podejmował dalsze decyzje o działaniach związanych z optymalizacją kampanii Google Ads.</p>
+          <p>Po udoskonaleniu procesu do powyższej wersji wszystkie informacje o leadach były poukładane i zorganizowane, co zwiększyło wydajność działu handlowego. <span className={styles.textRed}>Biznes miał bieżący wgląd</span> w działania prowadzone na leadach, a <span className={styles.textRed}>marketing mógł wyciągać trafne wnioski</span> na podstawie, których podejmował dalsze decyzje o działaniach związanych z optymalizacją kampanii Google Ads.</p>
         </div>
       </div>
     </Container>
@@ -170,13 +170,13 @@ const Home = () => {
             </p>
 
             <p className={`${styles.listDot}`}>
-              <span className={`${styles.turquoise} ${styles.dot}`}>⋅⋅</span>
-              <span>dokładne określenie obecnego procesu pokazuje jak on wygląda i z czego się składa na obecną chwilę, na jego podstawie przygotowuję nowy proces</span>
+              <span className={`${styles.seaweed} ${styles.dot}`}>⋅⋅</span>
+              <span>dokładne określenie procesu pokazuje jak on wygląda i z czego się składa na obecną chwilę, na jego podstawie przygotowuję nowy proces</span>
             </p>
 
             <p className={`${styles.listDot}`}>
               <span className={`${styles.yellow} ${styles.dot}`}>⋅⋅</span>
-              <span>rozbudowuję obecny proces o nowe elementy, w tym kroku także dokładnie analizuję obecne elementy aby móc je dopasować do nowego procesu</span>
+              <span>rozbudowuję obecny proces o nowe elementy, w tym kroku także dokładnie analizuję obecne elementy, aby móc je dopasować do nowego procesu</span>
             </p>
 
             <p className={`${styles.listDot}`}>
@@ -186,12 +186,12 @@ const Home = () => {
 
             <p className={`${styles.listDot}`}>
               <span className={`${styles.purple} ${styles.dot}`}>⋅⋅</span>
-              <span>dla każdego nowo wdrożonego procesu trzeba dać czas obserwacji, podczas którego dokładnie analizuję wykonywane w nim kroki, niezwykle ważne aby można było móc potem je optymalizować</span>
+              <span>dla każdego nowo wdrożonego procesu trzeba dać czas obserwacji, podczas którego dokładnie analizuję wykonywane w nim kroki, jest to niezwykle ważne, aby można było je później optymalizować</span>
             </p>
 
             <p className={`${styles.listDot}`}>
               <span className={`${styles.red} ${styles.dot}`}>⋅⋅</span>
-              <span>na podstawie wniosków z poprzedniego punktu wdrażane są poprawki i udoskonalenia, rzeczywistość jest najlepszym weryfikatorem bo nawet najlepsze procesy na papierze mogą nie sprostać rzeczywistości</span>
+              <span>na podstawie wniosków z poprzedniego punktu wdrażane są poprawki i udoskonalenia, rzeczywistość jest najlepszym weryfikatorem, bo nawet najlepsze procesy na papierze mogą nie sprostać rzeczywistości</span>
             </p>
 
             <p className={`${styles.listDot}`}>
@@ -212,15 +212,15 @@ const Home = () => {
         <div className="col-sm-6 align-self-center px-5">
         <h2 className={`${styles.title} ${styles.textStrong}`}><span className={styles.textWhite}>Zamów </span><br></br>rozmowę</h2>
         <div className={styles.boxText}>
-          <p className={styles.textWhite}>Dowiedz się jak mogę usprawnić procesy w Twojej firmie zostawiając kontakt do siebie.</p>
+          <p className={styles.textWhite}>Zostaw kontakt i dowiedz się, jak mogę poprawić procesy w Twojej firmie.</p>
         </div>
         <h3 className={styles.textWhite}><strong>Podczas rozmowy</strong></h3>
         <ul className={`${styles.textWhite} ${styles.checkedList}`}>
+          <li>poznamy się 😊</li>
           <li>porozmawiamy o Twoich procesach marketingowych i sprzedażowych</li>
           <li>o innych procesach też możemy porozmawiać</li>
           <li>ustalimy czego potrzebujesz</li>
           <li>opowiem Ci w czym mogę Ci pomóc</li>
-          <li>poznamy się 😊</li>
         </ul>
 
         </div>
@@ -243,7 +243,7 @@ const Home = () => {
         <div className={styles.emptySpace}></div>
           <div>
             <h3><strong>Pracuję z zespołem</strong></h3>
-            <p className="smallText">Współpracuję z programistami, specjlistami ds marketingu, specjalistami od social media oraz doświadczonymi handlowcami.</p>
+            <p className="smallText">Współpracuję z programistami, specjlistami ds. marketingu, specjalistami od social media oraz doświadczonymi handlowcami.</p>
             <p className="smallText">Dzięki zespołowi jestem w stanie prowadzić kilka projektów na raz oraz udoskonalać swoje techniki związane z budowaniem i automatyzacją porocesów.</p>
           </div>
       </div>
