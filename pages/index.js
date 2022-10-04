@@ -38,7 +38,7 @@ const Home = () => {
             <div>
               <p><b>Cześć</b>,</p>
               <p>mam na imię Michał, zajmuje się <b>zwiększaniem efektywności marketingu i sprzedaży </b>poprzez modernizację procesów w firmach.</p>
-              <p className="smallText">Łącze i agreguję ze sobą dane, aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
+              <p className="smallText">Łączę i agreguję ze sobą dane, aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
             </div>
         </div>
         <div className="col-sm-6">
@@ -141,7 +141,8 @@ const Home = () => {
 
           <p className={styles.listDot}>
             <span className={`${styles.azure} ${styles.dot}`}>⋅⋅</span>
-            <span>po odpowiedniej konfiguracji system reklamowy Google wysyłał do konektora słowo kluczowe, które wykorzystał użytkownik w wyszukiwarce, zanim do nas trafił</span>
+
+            <span>po odpowiedniej konfiguracji, system reklamowy Google wysyłał do konektora słowo kluczowe, które wykorzystał użytkownik</span>
           </p>
 
           <p className={styles.listDot}>
@@ -206,7 +207,7 @@ const Home = () => {
         </div>
       </div>
     </Container>
-    
+
     <div className="container" id="zamow_rozmowe" ref={myRef}>
       <div className={`row py-5 px-4 ${styles.contactForm}`}>
         <div className="col-sm-6 align-self-center px-5">
@@ -283,6 +284,5 @@ const Home = () => {
     </>
   )
 };
-
 
 export default Home;
