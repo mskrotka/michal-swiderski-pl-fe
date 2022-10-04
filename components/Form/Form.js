@@ -5,8 +5,6 @@ import { useRouter } from 'next/router'
 import axios from 'axios';
 import qs from 'qs'
 
-
-
 function Form({ onButton, children }) {
   const router = useRouter()
   const campaign_id = router.query.campaignid === undefined ? "" : 0

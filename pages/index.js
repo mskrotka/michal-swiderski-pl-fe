@@ -13,10 +13,7 @@ import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import { DiGoogleDrive } from 'react-icons/di';
 import { SiGmail } from 'react-icons/si';
 
-
-
 const Home = () => {
-
   const myRef = useRef();
 
   useEffect(() => {
@@ -31,8 +28,6 @@ const Home = () => {
 
 
   const actualYear = new Date().getFullYear()
-
-
   return (
     <>
     <Header visible={myElementIsVisible}/>
@@ -211,7 +206,7 @@ const Home = () => {
         </div>
       </div>
     </Container>
-
+    
     <div className="container" id="zamow_rozmowe" ref={myRef}>
       <div className={`row py-5 px-4 ${styles.contactForm}`}>
         <div className="col-sm-6 align-self-center px-5">
