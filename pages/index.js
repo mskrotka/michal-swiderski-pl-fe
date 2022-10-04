@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 
+import React, { useState, useRef, useEffect } from "react";
 import Image from 'next/image'
 import Clients from '../components/Clients/Clients';
 import Container from '../components/Container/Container'
@@ -11,26 +12,37 @@ import Header from '../components/Header/Header'
 import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import { DiGoogleDrive } from 'react-icons/di';
 import { SiGmail } from 'react-icons/si';
-import Link from 'next/link';
-
-
 
 
 
 const Home = () => {
 
+  const myRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0];
+      updateMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
+
+  const [myElementIsVisible, updateMyElementIsVisible] = useState();
+
+
   const actualYear = new Date().getFullYear()
+
 
   return (
     <>
-    <Header />
+    <Header visible={myElementIsVisible}/>
     <main>
       <Container>
         <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
           <div className={styles.emptySpace}></div>
             <div>
               <p><b>Cześć</b>,</p>
-              <p>mam na imię Michał, zajmuje się <b>procesami marketingowymi i sprzedażowymi</b> w firmach.</p>
+              <p>mam na imię Michał, zajmuje się <b>zwiększaniem efektywności marketingu i sprzedaży </b>poprzez modernizację procesów w firmach.</p>
               <p className="smallText">Łącze i agreguję ze sobą dane aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
             </div>
         </div>
@@ -200,8 +212,8 @@ const Home = () => {
       </div>
     </Container>
 
-    <div className="container">
-      <div className={`row py-4 px-4 ${styles.contactForm}`}>
+    <div className="container" id="zamow_rozmowe" ref={myRef}>
+      <div className={`row py-5 px-4 ${styles.contactForm}`}>
         <div className="col-sm-6 align-self-center px-5">
         <h2 className={`${styles.title} ${styles.textStrong}`}><span className={styles.textWhite}>Zamów </span><br></br>rozmowę</h2>
         <div className={styles.boxText}>

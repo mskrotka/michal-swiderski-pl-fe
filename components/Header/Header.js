@@ -1,14 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from "../../styles/Header.module.css"
 
+import Link from 'next/link'
 import Image from "next/image";
 import Head from 'next/head'
-import Container from '../Container/Container';
 import Button from "../../components/Button/Button"
 
 
 
-const Header = () => {
+const Header = ({visible}) => {
+
   return (
     <>
       <Head>
@@ -20,12 +21,16 @@ const Header = () => {
 
 
       <div className={styles.logoSection}>
-        <Image src="/images/michal_swiderski.svg" alt="Michał Świderski" width={120} height={120}/>
+        <Link href="/">
+          <Image src="/images/michal_swiderski.svg" alt="Michał Świderski" width={120} height={120}/>
+        </Link>
         </div>
 
+      {visible ? null :
       <div className={styles.buttonSection}>
-        <Button version="color" href="#">Zamów audyt procesu</Button>
+        <Button version="color" href="#zamow_rozmowe">Zamów audyt procesu</Button>
       </div>
+      }
 
     </>
   )
