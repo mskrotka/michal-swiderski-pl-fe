@@ -1,3 +1,65 @@
-.input {
-    border: 1px solid black
+.input, .textarea {
+    border: 1px solid black;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+-webkit-border-top-left-radius: 0;
+-moz-border-radius: 5px;
+-moz-border-radius-topleft: 0;
+border-radius: 5px;
+border-top-left-radius: 0;
+}
+
+.textarea {
+    min-height: 200px;
+}
+
+.allInput {
+    width: 100%;
+}
+
+.placeholder {
+    color: white;
+    font-weight: 300;
+    background-color: var(--bs-body-color);
+    padding: 10px 10px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.labelSmall {
+    color: white;
+    font-size: .8rem;
+    opacity: .6;
+}
+
+.required {
+    color: yellow;
+    opacity: .8;
+}
+
+.allInput {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.allCheckbox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.textCheckbox {
+    font-size: .7rem;
+    color: white;
+    line-height: .9rem;
+    margin-left: 5px;
 }

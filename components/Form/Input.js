@@ -1,12 +1,16 @@
 import styles from "/styles/Input.module.css"
 
 
-const Input = ({ type, name, label, ...props }) => {
+const Input = ({ type, name, label, labelSmall, ...props }) => {
+  const nextLabel = labelSmall ? <span className={styles.labelSmall}> ({labelSmall})</span> : ""
+  const req = props.required ? <span className={styles.required}>*</span> : ""
 
   return (
     <div className={styles.wrapper}>
       {type === "input" ?
-        <div className={styles.allInput}>
+        <label className={styles.allInput}>
+          <span className={styles.placeholder}>{label}{req}</span>
+          {nextLabel}
           <input
             className={styles.input}
             name={name}
@@ -14,22 +18,23 @@ const Input = ({ type, name, label, ...props }) => {
             type="text"
             {...props}
           />
-          <label for={name}>{label}</label>
-        </div>
+
+        </label>
  :
       type === "textarea" ?
-        <div className={styles.allTextarea}>
+        <label className={styles.allInput}>
+          <span className={styles.placeholder}>{label}</span>{req}
           <textarea
             className={styles.textarea}
+            placeholder={labelSmall}
             name={name}
             id={name}
             {...props}
           />
-          <label for={name}>{label}</label>
-        </div>
+        </label>
        :
       type === "checkbox" ?
-      <div className={styles.allCheckbox}>
+      <label className={`${styles.allInput} ${styles.allCheckbox}`}>
         <input
           className={styles.checkbox}
           name={name}
@@ -37,8 +42,8 @@ const Input = ({ type, name, label, ...props }) => {
           type="checkbox"
           {...props}
         />
-        <label for={name}>{label}</label>
-      </div>
+        <span className={styles.textCheckbox}>{label}</span>
+      </label>
       :
       "Niepoprawny typ!"}
     </div>

@@ -1,0 +1,22 @@
+.button {
+    width: 50%;
+}
+
+.req {
+    color: white;
+    text-align: right;
+    width: 50%;
+    font-size: .7rem;
+}
+
+.required {
+    color: yellow;
+    opacity: .8;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}

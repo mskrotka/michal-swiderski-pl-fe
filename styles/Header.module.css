@@ -1,19 +1,14 @@
-.wrapper {
-    margin: 0 auto;
-    max-width: 1400px;
-    display: flex;
-    align-items: center;
+.buttonSection {
     position: fixed;
-    top: 25px;
-    left: 0;
-    right: 0;
+    top: 35px;
+    right: 25px;
     z-index: 1;
 }
 
-.wrapper > * {
-    flex: 1 1;
-}
-
-.buttonSection {
-    text-align: right;
+.logoSection {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+    cursor: pointer;
 }
