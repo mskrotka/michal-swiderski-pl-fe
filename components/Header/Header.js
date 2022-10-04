@@ -31,7 +31,6 @@ const Header = ({visible}) => {
         <Button version="color" href="#zamow_rozmowe">Zamów audyt procesu</Button>
       </div>
       }
-
     </>
   )
 };
