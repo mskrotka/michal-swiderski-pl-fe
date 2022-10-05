@@ -63,3 +63,9 @@ border-top-left-radius: 0;
     line-height: .9rem;
     margin-left: 5px;
 }
+
+@media (max-width: 991px) {
+    .labelSmall {
+        display: none;
+    }
+  }

@@ -5,7 +5,7 @@ import React from "react";
 import { withRouter } from 'next/router'
 
 import Button from "../Button/Button";
-
+import { FaLock } from "react-icons/fa"
 
 class Form extends React.Component {
   constructor(props){
@@ -75,10 +75,12 @@ class Form extends React.Component {
           {children}
           <div className={styles.footer}>
             <div className={styles.button}>
-              <Button onClick={this.showProcess} version="light" type="Form">{onButton}</Button>
+              <div className={styles.centered}>
+                <Button onClick={this.showProcess} version="light" type="Form">{onButton}</Button>
+              </div>
             </div>
             <div className={styles.req}>
-              <span className={styles.required}>*</span> pole obowiązkowe
+              <span className={styles.savedData}><FaLock /> Twoje dane są bezpieczne</span>
             </div>
           </div>
         </form>

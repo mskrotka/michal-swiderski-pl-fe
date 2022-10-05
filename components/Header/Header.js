@@ -7,6 +7,7 @@ import Image from "next/image";
 import Head from 'next/head'
 import Button from "../../components/Button/Button"
 
+import { BsFillLightbulbFill } from "react-icons/bs"
 
 
 const Header = ({visible}) => {
@@ -35,14 +36,16 @@ const Header = ({visible}) => {
 
 
       <div className={styles.logoSection}>
-        <Link href="/">
-          <Image className={styles.logo} src="/images/michal_swiderski.svg" alt="Michał Świderski" width={120} height={120}/>
-        </Link>
+        <div className={styles.boxLogo}>
+          <Link href="/">
+            <Image className={styles.logo} src="/images/michal_swiderski.svg" alt="Michał Świderski" width={120} height={120}/>
+          </Link>
+        </div>
       </div>
 
       {visible ? null :
       <div className={styles.buttonSection}>
-        <Button version="color" href="#zamow_rozmowe">Zamów audyt procesu</Button>
+        <Button version="color" href="#zamow_rozmowe"><BsFillLightbulbFill className={styles.buttonIcon}/> Zamów audyt procesu</Button>
       </div>
       }
     </>
