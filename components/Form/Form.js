@@ -1,8 +1,8 @@
-import styles from "/styles/Form.module.css"
+import qs from "qs";
+import styles from "/styles/Form.module.css";
 
 import React from "react";
 import { withRouter } from 'next/router'
-import qs from 'qs'
 
 import Button from "../Button/Button";
 
