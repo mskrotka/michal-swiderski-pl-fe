@@ -27,8 +27,8 @@ const Header = ({visible}) => {
         }}
       />
       <Head>
-        <title>Zmodernizuję Twoje procesy marketingowe i sprzedażowe</title>
-        <meta name="description" content="Zajmuje się budowaniem procesów marketingowych i sprzedażowych. W ramach tego buduję konektory danych, ktre automatyzują obecne procesy." />
+        <title>Michał Świderski - modernizacja procesów marketingowych i sprzedażowych</title>
+        <meta name="description" content="Zajmuje się zwiększaniem efektywności marketingu i sprzedaży poprzez modernizację procesów w firmach. W ramach tego buduję konektory danych, które automatyzują ulepszają obecne procesy. Kompleksowo zrealizuję marketing w Twojej firmie." />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -36,9 +36,9 @@ const Header = ({visible}) => {
 
       <div className={styles.logoSection}>
         <Link href="/">
-          <Image src="/images/michal_swiderski.svg" alt="Michał Świderski" width={120} height={120}/>
+          <Image className={styles.logo} src="/images/michal_swiderski.svg" alt="Michał Świderski" width={120} height={120}/>
         </Link>
-        </div>
+      </div>
 
       {visible ? null :
       <div className={styles.buttonSection}>

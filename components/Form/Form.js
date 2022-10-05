@@ -1,76 +1,90 @@
 import styles from "/styles/Form.module.css"
-import Button from "../Button/Button";
-import { useRouter } from 'next/router'
 
-import axios from 'axios';
+import React from "react";
+import { withRouter } from 'next/router'
 import qs from 'qs'
 
-function Form({ onButton, children }) {
-  const router = useRouter()
-  const campaign_id = router.query.campaignid === undefined ? "" : 0
-  const keyword = router.query.keyword === undefined ? "" : 0
+import Button from "../Button/Button";
 
 
-  const handleSubmit = async (e) => {
-
-    // Stop the form from submitting and refreshing the page.
-    e.preventDefault()
-    console.log(e.target[3].value)
-
-    // Get data from the form.
-    const data = {
-      name: e.target[0].value,
-      phone: e.target[1].value,
-      info: e.target[2].value,
-      rodo: e.target[3].value,
-      campaign: campaign_id,
-      key_word: keyword,
-      landing_page: "997e294b-ac50-460d-9c14-ab4b9b4d5ba5"
+class Form extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      showProcess: "hidden"
     }
-
-    // Send the data to the server in JSON format.
-    const JSONdata = qs.stringify(data)
-
-    // API endpoint where we send form data.
-    const endpoint = 'https://api.michal-swiderski.pl/crm/lead/'
-
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: 'POST',
-      // Tell the server we're sending JSON.
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    }
-
-    // Send the form data to our forms API on Vercel and get a response.
-    const response = await fetch(endpoint, options)
-
-    // Get the response data from server as JSON.
-    // If server returns the name submitted, that means the form works.
-    const result = await response.json()
-    console.log(result)
-    e.target.reset();
   }
 
-  return (
-    <div className={styles.wrapper}>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        {children}
-        <div className={styles.footer}>
-          <div className={styles.button}>
-            <Button version="light" type="Form">{onButton}</Button>
+  render() {
+    const campaign_id_path = this.props.router.query.campaignid
+    const keyword_path = this.props.router.query.keyword
+    const { onButton, children } = this.props
+    const campaign_id = campaign_id_path === undefined ? "" : campaign_id_path
+    const keyword = keyword_path === undefined ? "" : keyword_path
+
+    const handleSubmit = async (e) => {
+
+      e.preventDefault()
+
+      const data = {
+        name: e.target[0].value,
+        phone: e.target[1].value,
+        info: e.target[2].value,
+        rodo: e.target[3].value,
+        campaign: campaign_id,
+        key_word: keyword,
+        landing_page: "997e294b-ac50-460d-9c14-ab4b9b4d5ba5"
+      }
+
+      const JSONdata = qs.stringify(data)
+      const endpoint = 'https://api.michal-swiderski.pl/crm/lead/'
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+        },
+        body: JSONdata,
+      }
+
+      const response = await fetch(endpoint, options)
+      const result = await response.json()
+      console.log(result)
+      e.target.reset();
+      this.setState({showProcess: "visible"})
+    }
+    return (
+      <div className={styles.wrapper}>
+        {this.state.showProcess === "visible" ?
+        <div className={styles.process}>
+          <div className={styles.center}>
+            <p>Dzięki za pozostawienie kontaktu! Zobacz jak działa mój proces 😉</p>
           </div>
-          <div className={styles.req}>
-            <span className={styles.required}>*</span> pole obowiązkowe
+          <ul className={styles.listProcess}>
+            <li>Strona sprawdza czy pochodzisz z kampanii</li>
+            <li>Strona zbiera Twoje dane z formularza</li>
+            <li>Strona wysyła dane do konektora</li>
+            <li>Konektor umieszcza dane w ClickUp</li>
+            <li>ClickUp na telefonie powadomił mnie, że napisałeś</li>
+          </ul>
+          <div className={styles.center}>
+            <h3 className={styles.timeProcess}>Wszystko w mniej niż 10 sekund!</h3>
           </div>
         </div>
-      </form>
-    </div>
-  )
-};
-
-export default Form;
+        :
+        <form className={styles.form} onSubmit={handleSubmit}>
+          {children}
+          <div className={styles.footer}>
+            <div className={styles.button}>
+              <Button onClick={this.showProcess} version="light" type="Form">{onButton}</Button>
+            </div>
+            <div className={styles.req}>
+              <span className={styles.required}>*</span> pole obowiązkowe
+            </div>
+          </div>
+        </form>
+        }
+      </div>
+    )
+  }
+}
+export default withRouter(Form);

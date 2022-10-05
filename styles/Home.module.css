@@ -36,6 +36,11 @@
   font-size: 4rem;
 }
 
+h3.title {
+  margin: 0;
+  font-size: 2rem;
+}
+
 .description {
   text-align: center;
 }
@@ -226,6 +231,34 @@
   left: 0;
   width: 1em;
   height: 1em;
+}
+
+.minHeightValue {
+  min-height: 780px;
+}
+
+.quotes {
+  background-color: #F2F2F2;
+  padding: 10px 50px;
+}
+
+.iconQuotes {
+  text-align: right;
+}
+
+.mail a, .phone a, .hiddenData h3 {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.forHidden {
+  min-height: 60px;
+  width: 100%;
+}
+
+.hiddenData, .mail, .phone {
+  display: flex;
 }
 
 @media (max-width: 600px) {
