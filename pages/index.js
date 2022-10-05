@@ -8,12 +8,16 @@ import Form from '../components/Form/Form';
 import Input from '../components/Form/Input';
 import MoreInfo from '../components/Form/MoreInfo';
 import Header from '../components/Header/Header'
+import Button from "../components/Button/Button";
 
 import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import { DiGoogleDrive } from 'react-icons/di';
 import { SiGmail } from 'react-icons/si';
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 
 const Home = () => {
+
+
   const myRef = useRef();
 
   useEffect(() => {
@@ -28,6 +32,12 @@ const Home = () => {
 
 
   const actualYear = new Date().getFullYear()
+
+  const [email, setVisibleEmail] = useState("hidden")
+  const [phone, setVisiblePhone] = useState("hidden")
+  const setEmail = () => setVisibleEmail("visible")
+  const setPhone = () => setVisiblePhone("visible")
+
   return (
     <>
     <Header visible={myElementIsVisible}/>
@@ -38,7 +48,7 @@ const Home = () => {
             <div>
               <p><b>Cześć</b>,</p>
               <p>mam na imię Michał, zajmuje się <b>zwiększaniem efektywności marketingu i sprzedaży </b>poprzez modernizację procesów w firmach.</p>
-              <p className="smallText">Łączę i agreguję ze sobą dane, aby zwiększyć wydajność działań marketingowych oraz sprzedażowych.</p>
+              <p className="smallText">Łączę i agreguję ze sobą dane, aby zwiększyć wydajność działań marketingowych oraz sprzedażowych. Kompleksowo zrealizuję marketing w Twojej firmie.</p>
             </div>
         </div>
         <div className="col-sm-6">
@@ -87,6 +97,37 @@ const Home = () => {
             </div>
         </div>
     </Container>
+
+    <div className="container" id="zamow_rozmowe" ref={myRef}>
+      <div className={`row py-5 px-4 ${styles.contactForm} ${styles.minHeightValue}`}>
+        <div className="col-sm-6 align-self-center px-5">
+        <h2 className={`${styles.title} ${styles.textStrong}`}><span className={styles.textWhite}>Zamów </span><br></br>rozmowę</h2>
+        <div className={styles.boxText}>
+          <p className={styles.textWhite}>Zostaw kontakt i dowiedz się, jak mogę poprawić procesy w Twojej firmie.</p>
+        </div>
+        <h3 className={styles.textWhite}><strong>Podczas rozmowy</strong></h3>
+        <ul className={`${styles.textWhite} ${styles.checkedList}`}>
+          <li>poznamy się 😊</li>
+          <li>porozmawiamy o Twoich procesach marketingowych i sprzedażowych</li>
+          <li>o innych procesach też możemy porozmawiać</li>
+          <li>ustalimy czego potrzebujesz</li>
+          <li>opowiem Ci w czym mogę Ci pomóc</li>
+        </ul>
+
+        </div>
+        <div className="col-sm-6 align-self-center">
+          <Form onButton="Zamów rozmowę">
+            <Input type="input" name="name" label="Twoje imię" required />
+            <Input type="input" name="phone" label="Twój numer telefonu" labelSmall="nikomu dalej nie przekażę" required />
+            <MoreInfo text="Podaj mi więcej informacji, dzięki nim będę bardziej przygotowany do rozmowy." />
+            <Input type="textarea" name="info" label="Dodatkowe informacje" labelSmall="podaj swój adres strony www, opisz w skrócie czym się zajmujesz, co chciałbyś mi przekazać przed naszą rozmową telefoniczną?" />
+            <Input type="checkbox" name="rodo" label="Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu kontaktu zwrotnego przez firmę Michał Świderski NIP: 952-203-59-01 zarejestrowaną w Warszawie przy ul. Cukrowniczej 8, 04-214." required />
+          </Form>
+
+        </div>
+
+      </div>
+    </div>
 
     <Container>
       <h2 className={styles.title}>Przykładowe <span className={styles.textRed}>flow</span></h2>
@@ -207,36 +248,62 @@ const Home = () => {
       </div>
     </Container>
 
-    <div className="container" id="zamow_rozmowe" ref={myRef}>
-      <div className={`row py-5 px-4 ${styles.contactForm}`}>
-        <div className="col-sm-6 align-self-center px-5">
-        <h2 className={`${styles.title} ${styles.textStrong}`}><span className={styles.textWhite}>Zamów </span><br></br>rozmowę</h2>
-        <div className={styles.boxText}>
-          <p className={styles.textWhite}>Zostaw kontakt i dowiedz się, jak mogę poprawić procesy w Twojej firmie.</p>
+    <Container>
+      <div className={`row py-5 px-4 ${styles.contactForm} `}>
+        <div className="col-sm-4 pt-4">
+        <h3 className={`${styles.title} ${styles.textStrong}`}><span className={styles.textWhite}>Napisz</span> albo <span className={styles.textWhite}>zadzwoń</span></h3>
         </div>
-        <h3 className={styles.textWhite}><strong>Podczas rozmowy</strong></h3>
-        <ul className={`${styles.textWhite} ${styles.checkedList}`}>
-          <li>poznamy się 😊</li>
-          <li>porozmawiamy o Twoich procesach marketingowych i sprzedażowych</li>
-          <li>o innych procesach też możemy porozmawiać</li>
-          <li>ustalimy czego potrzebujesz</li>
-          <li>opowiem Ci w czym mogę Ci pomóc</li>
-        </ul>
+        <div className="col-sm-5 pt-4">
+        <div className={styles.forHidden}>
+          {email === "visible" ?
+            <div className={styles.mail}>
+              <h3><a href="mailto:marketing@michal-swiderski.pl" target="blank">marketing@michal-swiderski.pl</a></h3>
+            </div> :
+
+            <div className={styles.hiddenData}>
+              <h3>marketing@mi</h3>
+              <Button version="light" type="noLink" onClick={setEmail}>Pokaż e-mail</Button>
+            </div>
+            }
+            </div>
+        </div>
+          <div className="col-sm-3 pt-4">
+
+          <div className={styles.forHidden}>
+          {phone === "visible" ?
+          <div className={styles.phone}>
+            <h3><a href="tel:+48727929336" target="blank">727 929 336</a></h3>
+          </div> :
+
+          <div className={styles.hiddenData}>
+            <h3>727 929</h3>
+            <Button version="light" type="noLink" onClick={setPhone}>Pokaż telefon</Button>
+          </div>
+          }
+          </div>
+
 
         </div>
-        <div className="col-sm-6 align-self-center">
-          <Form onButton="Zamów rozmowę">
-            <Input type="input" name="name" label="Twoje imię" required />
-            <Input type="input" name="phone" label="Twój numer telefonu" labelSmall="nikomu dalej nie przekażę" required />
-            <MoreInfo text="Podaj mi więcej informacji, dzięki nim będę bardziej przygotowany do rozmowy." />
-            <Input type="textarea" name="info" label="Dodatkowe informacje" labelSmall="podaj swój adres strony www, opisz w skrócie czym się zajmujesz, co chciałbyś mi przekazać przed naszą rozmową telefoniczną?" />
-            <Input type="checkbox" name="rodo" label="Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu kontaktu zwrotnego przez firmę Michał Świderski NIP: 952-203-59-01 zarejestrowaną w Warszawie przy ul. Cukrowniczej 8, 04-214." required />
-          </Form>
-
-        </div>
-
       </div>
-    </div>
+    </Container>
+
+    <Container>
+      <div className="col-sm-6 align-self-center">
+        <Image src="/images/123.webp" alt="Michał Świderski" width={688} height={555} />
+      </div>
+
+      <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
+          <div>
+            <h3><strong>Marketing to proces</strong></h3>
+            <p className="smallText">Marketing składa się z wielu narzędzi, które trzeba odpowiednio dobrać ze sobą i ułożyć. Ważnym jest aby spojrzeć na swój marketing w jak najszerszej perspektywie, ponieważ marketing to nie tylko promocje i ładnie wyglądające katalogi.</p>
+            <div className={styles.quotes}>
+              <p><ImQuotesLeft /></p>
+              <p className="smallText">Marketing jest działalnością, zbiorem instytucji i procesów służących tworzeniu komunikowaniu i wymianie ofert, które mają wartość dla klientów, partnerów i ogółu społeczeństwa.</p>
+              <p className="smallText"><strong>American Marketing Association</strong></p>
+            </div>
+          </div>
+        </div>
+    </Container>
 
     <Container>
       <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
@@ -244,7 +311,7 @@ const Home = () => {
           <div>
             <h3><strong>Pracuję z zespołem</strong></h3>
             <p className="smallText">Współpracuję z programistami, specjlistami ds. marketingu, specjalistami od social media oraz doświadczonymi handlowcami.</p>
-            <p className="smallText">Dzięki zespołowi jestem w stanie prowadzić kilka projektów na raz oraz udoskonalać swoje techniki związane z budowaniem i automatyzacją porocesów.</p>
+            <p className="smallText">Dzięki zespołowi poza zaprojektowaniem i przygotowaniem procesu mogę zaproponować kompletną obsługę marketingową w której skład wchodzą: reklamy (PPC) i pozycjonowanie (SEO), projekty graficzne, druk materiałów, budowa identyfikacji wizualnej, projekty wideo i sesje fotograficzne czy produktowe, obsługa Social Media, budowanie stron www, copywriting oraz wiele innych mniej lub bardziej niestandardowych elementów marketingowych. </p>
           </div>
       </div>
       <div className="col-sm-6 align-self-center">
