@@ -124,7 +124,7 @@ const Home = () => {
             <Input type="input" name="phone" label="Twój numer telefonu" labelSmall="nikomu dalej nie przekażę" required />
             <MoreInfo text="Podaj mi więcej informacji, dzięki nim będę bardziej przygotowany do rozmowy." />
             <Input type="textarea" name="info" label="Dodatkowe informacje" labelSmall="podaj swój adres strony www, opisz w skrócie czym się zajmujesz, co chciałbyś mi przekazać przed naszą rozmową telefoniczną?" />
-            <Input type="checkbox" name="rodo" label="Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu kontaktu zwrotnego przez firmę Michał Świderski NIP: 952-203-59-01 zarejestrowaną w Warszawie przy ul. Cukrowniczej 8, 04-214." required />
+            <Input type="checkbox" name="rodo" label="Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym formularzu w celu kontaktu zwrotnego przez firmę Michał Świderski NIP: 9522035901 zarejestrowaną w Warszawie przy ul. Cukrowniczej 8, 04-214." required />
           </Form>
 
         </div>
