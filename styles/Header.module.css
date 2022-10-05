@@ -12,3 +12,7 @@
     z-index: 1;
     cursor: pointer;
 }
+
+.logo {
+    filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.4));
+}

@@ -16,6 +16,11 @@ body {
 }
 
 
+a:hover {
+  text-decoration: underline !important;
+  color: white !important;
+}
+
 :root {
   --bs-body-bg: #f8f7f4 !important;
 }

@@ -20,3 +20,88 @@
     width: 100%;
     margin-top: 25px;
 }
+
+
+.process {
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.listProcess {
+    font-size: 1.3rem;
+    list-style: none;
+
+}
+
+.listProcess li:before {
+    content: '✓';
+    position: absolute;
+    color: white;
+    left: 10px;
+    width: 1em;
+    height: 1em;
+    color: var(--bs-green);
+    font-weight: bolder;
+}
+
+.listProcess li {
+    background-color: var(--bs-body-color);
+    padding: 5px 5px 5px 2em;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.timeProcess {
+    opacity: 0;
+}
+
+.listProcess li:nth-child(1){
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease .1s normal forwards 1 fadein;
+}
+
+.listProcess li:nth-child(2){
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 2s normal forwards 1 fadein;
+}
+
+.listProcess li:nth-child(3){
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 3.5s normal forwards 1 fadein;
+}
+
+.listProcess li:nth-child(4){
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 6s normal forwards 1 fadein;
+}
+
+.listProcess li:nth-child(5){
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 7.5s normal forwards 1 fadein;
+}
+
+.listProcess li:nth-child(6){
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 12s normal forwards 1 fadein;
+}
+
+.timeProcess {
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 8s normal forwards 1 fadein;
+}
+
+
+@keyframes fadein{
+    0% { opacity:0; transform: translateY(100%) }
+    66% { opacity:0; transform: translateY(50%) }
+    100% { opacity:1; transform: translateY(0%) }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; transform: translateY(100%) }
+    66% { opacity:0; transform: translateY(50%) }
+    100% { opacity:1; transform: translateY(0%) }
+}
