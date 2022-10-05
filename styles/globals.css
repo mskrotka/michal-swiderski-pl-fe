@@ -24,3 +24,16 @@ a:hover {
 :root {
   --bs-body-bg: #f8f7f4 !important;
 }
+
+
+
+
+@media (max-width: 991px) {
+  ul {
+    padding-left: 0rem !important;
+  }
+
+  input[type=checkbox] {
+    padding: 10px;
+  }
+}

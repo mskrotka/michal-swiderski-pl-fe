@@ -3,3 +3,8 @@
     padding: 15px !important;
     border-radius: 5px;
 }
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}

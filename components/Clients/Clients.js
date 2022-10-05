@@ -39,7 +39,9 @@ const dataClients = [
 const listClients =
   dataClients.map((item, index) => (
     <div key={index} className="col-sm-2">
-      <Image alt={item.name} title={item.name} src={item.image} width={150} height={150} className={styles.logo}/>
+      <div className={styles.centered}>
+        <Image alt={item.name} title={item.name} src={item.image} width={150} height={150} className={styles.logo}/>
+      </div>
     </div>
   ))
 
