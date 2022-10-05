@@ -32,4 +32,8 @@ a:hover {
   ul {
     padding-left: 0rem !important;
   }
+
+  input[type=checkbox] {
+    padding: 10px;
+  }
 }
