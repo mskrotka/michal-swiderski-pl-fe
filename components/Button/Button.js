@@ -2,6 +2,7 @@ import styles from "/styles/Button.module.css"
 
 import Link from 'next/link'
 
+
 const Button = ({ version, type, href, children, ...props }) => {
   const ver = version === "color" ? styles.color : styles.light
 

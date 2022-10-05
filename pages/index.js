@@ -18,6 +18,7 @@ import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 const Home = () => {
 
 
+
   const myRef = useRef();
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const Home = () => {
 
 
   const actualYear = new Date().getFullYear()
+
 
   const [email, setVisibleEmail] = useState("hidden")
   const [phone, setVisiblePhone] = useState("hidden")
@@ -328,7 +330,6 @@ const Home = () => {
         </div>
       </div>
     </div>
-
     </main>
 
 
