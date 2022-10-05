@@ -118,12 +118,6 @@ h3.title {
   padding-top: 2.5rem;
 }
 
-.dot {
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  margin: 3px 10px 0px 0px;
-}
 
 .yellow {
   background-color: #F9CB0C;
@@ -187,6 +181,18 @@ h3.title {
 
 .listDot {
   display: flex;
+  align-self: auto;
+}
+
+.dot {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin: 0px 10px 0px 0px;
+}
+
+.dotText {
+  width: 80%;
 }
 
 .image {
