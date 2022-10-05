@@ -182,6 +182,7 @@ const Home = () => {
 
           <p className={styles.listDot}>
             <span className={`${styles.azure} ${styles.dot}`}>⋅⋅</span>
+
             <span>po odpowiedniej konfiguracji, system reklamowy Google wysyłał do konektora słowo kluczowe, które wykorzystał użytkownik</span>
           </p>
 
