@@ -23,12 +23,10 @@
     padding: 15px;
     border: none;
     border-radius: 10px;
-    background:
-      linear-gradient(to right, #f8f7f4, #f8f7f4);
+    background: linear-gradient(to right, #f8f7f4, #f8f7f4);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
     position: relative;
-    border-style: outline;
     color: rgba(180,3,68,1);
     -webkit-box-shadow: 8px 13px 35px -7px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 13px 35px -7px rgba(66, 68, 90, 1);
