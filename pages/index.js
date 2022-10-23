@@ -138,12 +138,12 @@ const Home = () => {
       <div className={`row ${styles.context}`}>
         <div className="col-sm-4">
           <h3><strong>Branża</strong></h3>
-          <p className="smallText">Firma zajmuje się sprzedażą i realizacją instalacji fotowoltaicznych oraz pomp ciepła na terenie białej Podlaskiej i Warszawy. Wcześniej nie korzystała z automatyzacji przy obsłudze klientów.</p>
+          <p className="smallText">Firma zajmuje się sprzedażą i realizacją instalacji fotowoltaicznych oraz pomp ciepła na terenie Białej Podlaskiej i Warszawy. Wcześniej nie korzystała z automatyzacji przy obsłudze klientów.</p>
         </div>
 
         <div className="col-sm-8">
           <h3><strong>Proces</strong></h3>
-          <p className="smallText">Prowdzone były działania reklamowe z zakresu pozyskiwania kontaktów do potencjalnych klientów poprzez kampanie stworzone w Google Ads. Osobom poszukująch usług tego typu, wyświetlała się reklama, która kierowała na landing page. Znajdował się tam formularz z imieniem, numerem telefonu i dodatkowymi informacjami od użytkownika.</p>
+          <p className="smallText">Prowdzone były działania reklamowe z zakresu pozyskiwania kontaktów do potencjalnych klientów poprzez kampanie stworzone w Google Ads. Osobom szukającym usług z zakresu fotowoltaiki i pomp ciepła, wyświetlała się reklama, która kierowała na landing page. Znajdował się tam formularz z imieniem, numerem telefonu i dodatkowymi informacjami od użytkownika.</p>
         </div>
       </div>
 
