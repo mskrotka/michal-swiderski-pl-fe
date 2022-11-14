@@ -157,7 +157,7 @@ const Home = () => {
       <div className={`row ${styles.context}`}>
       <div className="col-sm-3">
           <h3><strong>Konektor</strong></h3>
-          <p className="smallText">Głównym zadaniem konektora w tym procesie było <span className={styles.textRed}>tworzenie niezależnej bazy danych</span>, aby można było w przyszłości przejść na system CRM z prawidziwego zdarzenia. Sprawował on kontrolę nad każdym etapem procesu od momentu otrzymania danych kontaktowych użytkownika (lead), aż do zakończenia kontaktu. <span className={styles.textRed}>Konektor został zbudowany w oparciu o API</span>, za pomocą którego komunikował się z pozostałymi systemami obecnymi w procesie.</p>
+          <p className="smallText">Głównym zadaniem konektora w tym procesie było <span className={styles.textRed}>tworzenie niezależnej bazy danych</span>, aby można było w przyszłości przejść na system CRM z prawdziwego zdarzenia. Sprawował on kontrolę nad każdym etapem procesu od momentu otrzymania danych kontaktowych użytkownika (lead), aż do zakończenia kontaktu. <span className={styles.textRed}>Konektor został zbudowany w oparciu o API</span>, za pomocą którego komunikował się z pozostałymi systemami obecnymi w procesie.</p>
         </div>
 
         <div className="col-sm-9">
@@ -298,7 +298,7 @@ const Home = () => {
       <div className={`col-sm-6 align-self-center ${styles.textLeft}`}>
           <div>
             <h3><strong>Marketing to proces</strong></h3>
-            <p className="smallText">Marketing składa się z wielu narzędzi, które trzeba odpowiednio dobrać ze sobą i ułożyć. Ważnym jest aby spojrzeć na swój marketing w jak najszerszej perspektywie, ponieważ marketing to nie tylko promocje i ładnie wyglądające katalogi.</p>
+            <p className="smallText">Marketing składa się z wielu narzędzi, które trzeba odpowiednio dobrać ze sobą i ułożyć. Ważnym jest, aby spojrzeć na swój marketing w jak najszerszej perspektywie, ponieważ marketing to nie tylko promocje i ładnie wyglądające katalogi.</p>
             <div className={styles.quotes}>
               <p><ImQuotesLeft /></p>
               <p className="smallText">Marketing jest działalnością, zbiorem instytucji i procesów służących tworzeniu komunikowaniu i wymianie ofert, które mają wartość dla klientów, partnerów i ogółu społeczeństwa.</p>
@@ -314,7 +314,7 @@ const Home = () => {
           <div>
             <h3><strong>Pracuję z zespołem</strong></h3>
             <p className="smallText">Współpracuję z programistami, specjlistami ds. marketingu, specjalistami od social media oraz doświadczonymi handlowcami.</p>
-            <p className="smallText">Dzięki zespołowi poza zaprojektowaniem i przygotowaniem procesu mogę zaproponować kompletną obsługę marketingową w której skład wchodzą: reklamy (PPC) i pozycjonowanie (SEO), projekty graficzne, druk materiałów, budowa identyfikacji wizualnej, projekty wideo i sesje fotograficzne czy produktowe, obsługa Social Media, budowanie stron www, copywriting oraz wiele innych mniej lub bardziej niestandardowych elementów marketingowych. </p>
+            <p className="smallText">Dzięki zespołowi poza zaprojektowaniem i przygotowaniem procesu mogę zaproponować kompletną obsługę marketingową, w której skład wchodzą: reklamy (PPC) i pozycjonowanie (SEO), projekty graficzne, druk materiałów, budowa identyfikacji wizualnej, projekty wideo i sesje fotograficzne czy produktowe, obsługa Social Media, budowanie stron www, copywriting oraz wiele innych mniej lub bardziej niestandardowych elementów marketingowych. </p>
           </div>
       </div>
       <div className="col-sm-6 align-self-center">

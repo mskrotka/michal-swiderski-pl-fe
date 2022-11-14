@@ -33,7 +33,7 @@ class Form extends React.Component {
         rodo: e.target[3].value,
         campaign: campaign_id,
         key_word: keyword,
-        landing_page: "997e294b-ac50-460d-9c14-ab4b9b4d5ba5"
+        landing_page: "8a86b6de-7f9f-4941-814b-49745927d2b3"
       }
 
       const JSONdata = qs.stringify(data)
