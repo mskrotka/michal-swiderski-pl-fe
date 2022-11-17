@@ -1,0 +1,14 @@
+.CalendarGoogle {
+    border: none;
+    width: 100%;
+    height: 950px;
+}
+
+
+@media (max-width: 991px) {
+    .CalendarGoogle {
+        width: 100%;
+        min-height: 1550px;
+    }
+
+  }
