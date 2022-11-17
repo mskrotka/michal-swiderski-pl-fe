@@ -14,6 +14,7 @@ import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import { DiGoogleDrive } from 'react-icons/di';
 import { SiGmail } from 'react-icons/si';
 import { ImQuotesLeft } from 'react-icons/im'
+import Calendar from '../components/Calendar/Calendar';
 
 
 const Home = () => {
@@ -322,6 +323,11 @@ const Home = () => {
       </div>
     </Container>
 
+    <Container>
+      <h3 id="kalendarz" className={styles.centered}><strong>Wybierz termin spotkania</strong></h3>
+      <Calendar />
+    </Container>
+
     <div className="container mb-5">
       <div className={`col-sm-12 align-self-center`}>
         <div>
@@ -331,7 +337,6 @@ const Home = () => {
       </div>
     </div>
     </main>
-
 
       <footer className={styles.footer}>
         <div className="container">
