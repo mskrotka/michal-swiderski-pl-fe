@@ -323,10 +323,10 @@ const Home = () => {
       </div>
     </Container>
 
-    <Container>
+    {/* <Container>
       <h3 id="kalendarz" className={styles.centered}><strong>Wybierz termin spotkania</strong></h3>
       <Calendar />
-    </Container>
+    </Container> */}
 
     <div className="container mb-5">
       <div className={`col-sm-12 align-self-center`}>
